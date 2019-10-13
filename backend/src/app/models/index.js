@@ -1,10 +1,17 @@
+"use strict";
+
 const fs = require("fs");
 const path = require("path");
 const Sequelize = require("sequelize");
-const config = require("../../config/database.js");
-
+const config = require("../../config/database");
 const db = {};
-const sequelize = new Sequelize(config);
+
+const sequelize = new Sequelize(
+  config.database,
+  config.username,
+  config.password,
+  config
+);
 
 fs.readdirSync(__dirname)
   .filter(
@@ -14,7 +21,7 @@ fs.readdirSync(__dirname)
       file.slice(-3) === ".js"
   )
   .forEach(file => {
-    const model = sequelize.import(path.join(__dirname, file));
+    const model = sequelize["import"](path.join(__dirname, file));
     db[model.name] = model;
   });
 
