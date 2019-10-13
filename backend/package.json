@@ -1,0 +1,21 @@
+{
+  "name": "notey-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app/src/index.js",
+    "dev": "nodemon app/src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.1",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.19.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
