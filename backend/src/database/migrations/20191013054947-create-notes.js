@@ -12,8 +12,8 @@ module.exports = {
         type: DataTypes.STRING
       },
       content: {
-        allowNull: false,
-        type: DataTypes.STRING
+        allowNull: true,
+        type: DataTypes.TEXT
       },
       tags: {
         type: DataTypes.STRING
@@ -26,6 +26,7 @@ module.exports = {
       user_id: {
         type: DataTypes.INTEGER,
         onDelete: "CASCADE",
+        allowNull: false,
         references: {
           model: "users",
           key: "id",
