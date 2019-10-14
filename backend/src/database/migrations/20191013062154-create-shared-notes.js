@@ -37,6 +37,6 @@ module.exports = {
   },
 
   down: queryInterface => {
-    return queryInterface.dropTable("notes");
+    return queryInterface.dropTable("shared_notes");
   }
 };

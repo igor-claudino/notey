@@ -1,8 +1,8 @@
 module.exports = (sequelize, DataTypes) => {
   const Note = sequelize.define("Note", {
     title: DataTypes.STRING,
-    content: DataTypes.STRING,
-    tags: DataTypes.ARRAY(DataTypes.STRING),
+    content: DataTypes.TEXT,
+    tags: DataTypes.STRING,
     synced: DataTypes.BOOLEAN
   });
 
