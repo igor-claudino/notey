@@ -12,14 +12,13 @@ Notey é um aplicativo de criação de notas para dispositivos móveis.
   
 
 - [ ] Criar uma nova conta no app;
-	- [ ] API 
+	- [x] API 
 	- [ ] APP
-
 - [ ] Realizar login;
-	- [ ] API 
+	- [x] API 
 	- [ ] APP
 - [ ] Alterar nome, e-mail e senha;
-	- [ ] API 
+	- [x] API 
 	- [ ] APP
 - [ ] Criar uma nova nota;
 	- [ ] API 

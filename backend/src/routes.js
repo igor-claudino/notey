@@ -1,12 +1,9 @@
 const routes = require("express").Router();
-const { User } = require("./app/models");
 
-User.create({
-  name: "Igor Claudino",
-  email: "igor.claudino.ic@gmail.com",
-  password_hash: "123456"
-})
-  .then(() => console.log("OK"))
-  .catch(err => console.log(err));
+const SessionController = require("./app/controllers/SessionController");
+const UserController = require("./app/controllers/UserController");
+
+routes.use("/sessions", SessionController);
+routes.use("/users", UserController);
 
 module.exports = routes;
