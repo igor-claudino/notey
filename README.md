@@ -21,28 +21,28 @@ Notey é um aplicativo de criação de notas para dispositivos móveis.
 	- [x] API 
 	- [ ] APP
 - [ ] Criar uma nova nota;
-	- [ ] API 
+	- [x] API 
 	- [ ] APP
 - [ ] Listar notas do usuário;
-	- [ ] API 
+	- [x] API 
 	- [ ] APP
 - [ ] Editar notas existentes;
-	- [ ] API 
+	- [x] API 
 	- [ ] APP
 - [ ] Excluir notas existentes;
-	- [ ] API 
+	- [x] API 
 	- [ ] APP
 - [ ] Pesquisar notas por título, conteúdo ou tags;
-	- [ ] API 
+	- [x] API 
 	- [ ] APP
 - [ ] Compartilhar notas com outro usuário;
-	- [ ] API 
+	- [x] API 
 	- [ ] APP
 - [ ] Listar notas compartilhadas com o usuário;
-	- [ ] API 
+	- [x] API 
 	- [ ] APP
 - [ ] Remover compartilhamento de notas com outros usuários.
-	- [ ] API 
+	- [x] API 
 	- [ ] APP
   
 
