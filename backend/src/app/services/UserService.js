@@ -41,7 +41,7 @@ class UserService {
 
     if (id != req.userId) {
       return res
-        .status(401)
+        .status(403)
         .json({ message: "Você não tem permissão para alterar este usuário" });
     }
 

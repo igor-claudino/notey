@@ -88,7 +88,7 @@ class NoteService {
 
     if (note.user_id != user_id) {
       return res
-        .status(401)
+        .status(403)
         .json({ messsage: "Você não tem permissão para alterar esta nota" });
     }
 
@@ -113,7 +113,7 @@ class NoteService {
 
     if (note.user_id != user_id) {
       return res
-        .status(401)
+        .status(403)
         .json({ messsage: "Você não tem permissão para excluir esta nota" });
     }
 
