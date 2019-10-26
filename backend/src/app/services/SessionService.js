@@ -11,7 +11,9 @@ class SessionService {
     });
 
     if (!user) {
-      return res.status(401).json({ message: "Usuário não encontrado." });
+      return res
+        .status(401)
+        .json({ message: "Não há conta para este e-mail." });
     }
 
     if (!(await user.checkPassword(password))) {

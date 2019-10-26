@@ -34,6 +34,23 @@ class UserService {
     return res.status(201).json({ user, token: user.generateToken() });
   }
 
+  async show(req, res) {
+    const { email } = req.query;
+    const userDb = await User.findOne({
+      where: {
+        email
+      }
+    });
+
+    if (userDb) {
+      return res
+        .status(409)
+        .json({ message: "Já existe uma conta com este e-mail." });
+    }
+
+    return res.status(204).send();
+  }
+
   async update(req, res) {
     const { id } = req.params;
 
