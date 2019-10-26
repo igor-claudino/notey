@@ -1,9 +1,20 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import Login from "./src/pages/Login";
+import React, { useEffect } from "react";
 import Routes from "./src/routes";
+
+import { Provider } from "react-redux";
+import store from "./src/store";
+
+import * as NavigationService from "./src/services/navigation/NavigationService";
+
 export default function App() {
-  return <Routes />;
+  useEffect(() => NavigationService.setNavigator(this.navigator), []);
+  return (
+    <Provider store={store}>
+      <Routes
+        ref={nav => {
+          this.navigator = nav;
+        }}
+      />
+    </Provider>
+  );
 }
-
-

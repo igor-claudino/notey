@@ -9,16 +9,24 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 // goes here.
 
 import Login from "./pages/Login";
-import Menu from "./pages/Menu";
+import StepOneNewAccount from "./pages/StepOneNewAccount";
+import StepTwoNewAccount from "./pages/StepTwoNewAccount";
+import MyNotes from "./pages/MyNotes";
 import SharedWithMe from "./pages/SharedWithMe";
 import MyProfile from "./pages/MyProfile";
 import AuthLoading from "./pages/AuthLoading";
 
-const AuthStack = createSwitchNavigator({ Login });
+const AuthStack = createStackNavigator(
+  { Login, StepOneNewAccount, StepTwoNewAccount },
+  {
+    headerMode: "none",
+    headerBackTitleVisible: true
+  }
+);
 const AppStack = createBottomTabNavigator(
   {
     "Compartilhadas Comigo": SharedWithMe,
-    "Minhas notas": Menu,
+    "Minhas notas": MyNotes,
     "Meu Perfil": MyProfile
   },
   {
@@ -28,7 +36,7 @@ const AppStack = createBottomTabNavigator(
         const { routeName } = navigation.state;
         let iconName;
         if (routeName === "Minhas notas") {
-          iconName = `note-multiple`;
+          iconName = `note-text`;
           // Sometimes we want to add badges to some icons.
           // You can check the implementation below.
           //IconComponent = HomeIconWithBadge;
@@ -54,12 +62,13 @@ const AppStack = createBottomTabNavigator(
           <Text
             style={{
               alignSelf: "center",
-              margin: 5,
+              marginBottom: 5,
               fontSize: 12,
               fontFamily: "Roboto",
               lineHeight: 14,
               color: focused ? tintColor : "#666",
-              fontWeight: focused ? "bold" : "normal"
+              fontWeight: focused ? "bold" : "normal",
+              textAlign: "center"
             }}
           >
             {routeName}
@@ -70,7 +79,8 @@ const AppStack = createBottomTabNavigator(
     tabBarOptions: {
       activeTintColor: "#9B56BB",
       inactiveTintColor: "#666",
-      pressOpacity: true
+      pressOpacity: true,
+      adaptive: true
     }
   }
 );

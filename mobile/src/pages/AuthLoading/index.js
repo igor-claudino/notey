@@ -7,6 +7,7 @@ import {
   View
 } from "react-native";
 
+import Loader from "../../components/Loader";
 export default class AuthLoading extends React.Component {
   componentDidMount() {
     this._bootstrapAsync();
@@ -24,12 +25,7 @@ export default class AuthLoading extends React.Component {
 
   // Render any loading content that you like here
   render() {
-    return (
-      <View style={styles.container}>
-        <ActivityIndicator size={100} color="#9B56BB" />
-        <StatusBar barStyle="default" />
-      </View>
-    );
+    return <Loader />;
   }
 }
 

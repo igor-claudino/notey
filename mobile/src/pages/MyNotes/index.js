@@ -8,7 +8,7 @@ import Header from "../../components/Header";
 
 export default function MyNotes() {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ marginTop: 50 }}>
       <Header />
     </SafeAreaView>
   );
