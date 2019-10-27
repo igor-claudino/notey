@@ -5,6 +5,8 @@
 
 Notey é um aplicativo de criação de notas para dispositivos móveis.
 
+[Protótipo feito nop Figma](https://www.figma.com/proto/vBqrq0JSsnMiCk6nn6ZS1j/App?node-id=2%3A12&scaling=scale-down)
+
   
 
 ## Features para a V1.0
